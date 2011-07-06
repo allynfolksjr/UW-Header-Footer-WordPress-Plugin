@@ -1,0 +1,102 @@
+University of Washington Header/Footer Wizard for Wordpress
+
+======
+
+Nikky Southerland, UW Information Technology nikky@uw.edu
+
+======
+
+Introduction
+
+
+
+This plugin provides a simple interface that allows you to embed a UW-themed
+header/footer into your Wordpress site. It allows you to use UW theming without
+having to directly modify the theme file, allowing easy theme and Wordpress
+upgrades.
+
+=======
+
+How it works.
+
+
+The Header & Footer Wizard stores your choices for headers and footers by NetID,
+and can create a "SHTML" include file that is based off of your NetID. Whenever
+the include is called, it will query the Header & Footer Wizard and place the
+choosen header and/or footers into the page.
+
+This plugin uses that dynamically-generated URL to allow you to change your
+settings on the fly. Additionally, it will automatically update the code as
+there are updates to the stylings.
+
+Finally, it will place the header, footer, and CSS in the proper location on
+WordPress. Nifty, eh?
+
+======
+
+Use Information
+
+
+There are two modes you can run in:
+
+* "Default mode," which will use the default header and footer. If you want to
+use the default mode, just activate the plugin: you're done!
+
+
+* "Custom Mode," which allows you to customize the header & footer as you see
+fit.
+
+For custom mode, follow these steps:
+
+1) Go to the header and footer wizard:
+
+https://depts.washington.edu/uweb/tmplgen/
+
+
+2) Enter in your contact email and site URL. Continue through the steps choosing
+what options you'd prefer.
+
+
+3) Once you're complete and at the "Code Preference" step, choose "Include" and
+click on "generate my code."
+
+4) Activate the plugin and go to the "UW Theming" screen. Uncheck "default" and
+enter in the NetID of where you ran the theming wizard. This is probably your
+personal NetID, but if you're not sure, go to weblogin.washington.edu to see
+what you're logged in as.
+
+5) Click on "save" and check out your site. It should be updated with your new
+options!
+
+
+======
+
+Version History:
+
+1.0.1 July 5th, 2011
+
+* Updated Settings page and functionality.
+
+1.0.0 July 1st, 2011
+
+Rewrote and optimized to use the generated code from the header & footer wizard.
+
+0.9.1 March 31st, 2011
+
+* Added "No Header" option.  Code optimizations.
+
+To-Do:
+
+* Kitchen Sink Support
+
+0.9 March 30th, 2011
+
+* Options page complete.  Supports footers, search settings, and the thin strip.
+
+To-do
+
+* Tighten up code.  Kitchen Sink Support
+
+0.5 March 2011 
+
+Initial version. Only supported one header option, and no options screen.
