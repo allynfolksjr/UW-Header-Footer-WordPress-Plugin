@@ -1,14 +1,14 @@
 <?php
 /**
  *   @package uw_header_footer
- *    @version 1.0
+ *    @version 1.0.1
  */
 /*
   Plugin Name: UW Theme Element Generator
   Plugin URI: http://staff.washington.edu/nikky/wordpress-plugins-and-themes/ 
   Description: Embeds headers and footers from the UW theme generator into Wordpress.
   Author: Nikky Southerland 
-  Version: 1.0
+  Version: 1.0.1
   Author URI: http://staff.washington.edu/nikky
  */
 

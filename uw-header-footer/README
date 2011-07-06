@@ -71,6 +71,15 @@ options!
 
 ======
 
+Notes
+
+
+* Your theme must have wp_head(); and wp_footer();, otherwise the plugin will have 
+nowhere to hook into.
+
+
+======
+
 Version History:
 
 1.0.1 July 5th, 2011
