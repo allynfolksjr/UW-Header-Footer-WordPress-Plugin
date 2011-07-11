@@ -20,7 +20,7 @@ include 'uwhf_lib.php';
 
 if (get_option('themeDefaultOn') != "no")
 {
-  $themeNetid = "blog";
+  $themeNetid = "blogs";
 }
 else
 {
