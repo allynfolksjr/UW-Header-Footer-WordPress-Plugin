@@ -11,6 +11,7 @@ function uwhf_menu() {
 function register_uwhf_settings() {
   register_setting( 'uwhf_settings', 'themeNetid' );
   register_setting( 'uwhf_settings', 'themeDefaultOn' );
+  register_setting( 'uwhf_settings', 'uwhfStatus' );
 }
 
 function uwhf_settings_page() {
@@ -66,13 +67,20 @@ modified.</li>
 <form method="post" action="options.php">
 <?php settings_fields( 'uwhf_settings' ); ?>
 <?php do_settings_sections( 'uwhf_settings' ); ?>
-<p>Check the box below if you want to use the default header & footer.</p>
-Default Header & Footer? 
+<strong>Activate/Deactivate Header & Footer</strong>
+<br/>
+<input type="radio" name="uwhfStatus" value="yes" <? if ( get_option('uwhfStatus') == "yes" || get_option('uwhfStatus') == "") { echo 'checked=checked';} ?> /> Activated</input>
+<br/>
+<input type="radio" name="uwhfStatus" value="no" <? if ( get_option('uwhfStatus') == "no" ) { echo 'checked=checked';} ?>/> Deactivated</input></br>
+<br/>
+<strong>Default Header & Footer?</strong> 
+<br/>
 <input type="radio" name="themeDefaultOn" value="yes" <? if ( get_option('themeDefaultOn') == "yes" || get_option('themeDefaultOn') == "") { echo 'checked=checked';} ?> /> Yes, please use the default header & footer.</input>
+<br/>
 <input type="radio" name="themeDefaultOn" value="no" <? if ( get_option('themeDefaultOn') == "no" ) { echo 'checked=checked';} ?>/> No, please the following NetID's header and footer.</input>
 
 <p>If you selected "no" above, and want to use a custom header & footer, 
-enter the NetID where you ran the header & footer with. For your reference, you are currently logged in as "<?=$_SERVER['REMOTE_USER']?>".</p>
+enter the NetID where you ran the header & footer with. <!--For your reference, you are currently logged in as "<?//=$_SERVER['REMOTE_USER']?>".--></p>
 Custom Theme NetID: <input type="text" maxlength="8" name="themeNetid" value="<?php print 
 get_option('themeNetid'); ?>">
 <br/>
