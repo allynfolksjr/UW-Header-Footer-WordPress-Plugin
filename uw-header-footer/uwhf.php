@@ -17,10 +17,9 @@ include 'uwhf_lib.php';
 
 /* Figure out what kind of theme we'll be applying */
 
-
 if (get_option('themeDefaultOn') != "no")
 {
-  $themeNetid = "blog";
+  $themeNetid = "blogs";
 }
 else
 {
@@ -63,7 +62,8 @@ function uwStyle()
 }
 
 // The hooks
-
+if (get_option('uwhfStatus') != "no")
+{
 add_action('wp_print_styles','uwStyle');
 
 /* Then, the header, using a hacky hack hack */
@@ -72,4 +72,4 @@ add_filter('shutdown',uwHeader,0);
 
 /* Last, footer */
 add_action('wp_footer','uwFooter');
-
+}
